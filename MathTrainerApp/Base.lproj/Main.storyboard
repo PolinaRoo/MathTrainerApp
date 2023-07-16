@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -236,9 +237,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LX-Vb-mkY">
-                                <rect key="frame" x="50" y="109" width="62" height="35"/>
+                                <rect key="frame" x="293.33333333333331" y="79" width="69.666666666666686" height="38"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Back"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Back">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Z5n-Dm-Dcf" kind="unwind" unwindAction="unwindActionWithUnwindSegue:" id="r68-Le-401"/>
                                 </connections>
@@ -299,21 +309,28 @@
                             <constraint firstItem="aHE-8s-VVa" firstAttribute="top" secondItem="7LH-qD-UnF" secondAttribute="bottom" constant="120" id="5R8-Il-UHw"/>
                             <constraint firstItem="aHE-8s-VVa" firstAttribute="centerX" secondItem="lCN-mT-gWD" secondAttribute="centerX" constant="-60" id="AhQ-SU-fmr"/>
                             <constraint firstItem="7LH-qD-UnF" firstAttribute="centerX" secondItem="lCN-mT-gWD" secondAttribute="centerX" id="LRZ-Mn-4a7"/>
-                            <constraint firstItem="6LX-Vb-mkY" firstAttribute="leading" secondItem="WfE-H7-Htb" secondAttribute="leading" constant="50" id="Lbv-tY-6YU"/>
-                            <constraint firstItem="6LX-Vb-mkY" firstAttribute="top" secondItem="WfE-H7-Htb" secondAttribute="top" constant="50" id="YZc-c1-xkq"/>
                             <constraint firstItem="mIS-dk-y5l" firstAttribute="centerY" secondItem="aHE-8s-VVa" secondAttribute="centerY" id="ets-Ho-fLj"/>
+                            <constraint firstItem="6LX-Vb-mkY" firstAttribute="top" secondItem="WfE-H7-Htb" secondAttribute="top" constant="20" id="jAf-tJ-vMV"/>
+                            <constraint firstItem="WfE-H7-Htb" firstAttribute="trailing" secondItem="6LX-Vb-mkY" secondAttribute="trailing" constant="30" id="sfK-uW-ks9"/>
                             <constraint firstItem="7LH-qD-UnF" firstAttribute="centerY" secondItem="lCN-mT-gWD" secondAttribute="centerY" constant="-30" id="vAW-VD-Lom"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Vq-P4-FJf"/>
+                    <connections>
+                        <outletCollection property="buttonsAnswer" destination="aHE-8s-VVa" collectionClass="NSMutableArray" id="X7T-xN-3r7"/>
+                        <outletCollection property="buttonsAnswer" destination="mIS-dk-y5l" collectionClass="NSMutableArray" id="L9X-FP-RZ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ikr-TH-njJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Z5n-Dm-Dcf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1120" y="4"/>
+            <point key="canvasLocation" x="1119.8473282442749" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
