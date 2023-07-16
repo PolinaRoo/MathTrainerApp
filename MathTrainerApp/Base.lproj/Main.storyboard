@@ -278,6 +278,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddy-R5-IO0"/>
+                                    <action selector="leftAction:" destination="alO-DL-jei" eventType="touchUpInside" id="Dix-ga-7IR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIS-dk-y5l">
@@ -299,6 +300,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6pb-R0-MfF"/>
+                                    <action selector="rightAction:" destination="alO-DL-jei" eventType="touchUpInside" id="kBf-8V-aUx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -317,8 +319,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Vq-P4-FJf"/>
                     <connections>
-                        <outletCollection property="buttonsAnswer" destination="aHE-8s-VVa" collectionClass="NSMutableArray" id="X7T-xN-3r7"/>
-                        <outletCollection property="buttonsAnswer" destination="mIS-dk-y5l" collectionClass="NSMutableArray" id="L9X-FP-RZ3"/>
+                        <outlet property="leftButton" destination="aHE-8s-VVa" id="jgR-zB-Nak"/>
+                        <outlet property="questionLabel" destination="7LH-qD-UnF" id="CUZ-r0-Vvx"/>
+                        <outlet property="rightButton" destination="mIS-dk-y5l" id="MTa-BE-AS3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ikr-TH-njJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
