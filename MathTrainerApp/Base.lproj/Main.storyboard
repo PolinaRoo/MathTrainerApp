@@ -17,9 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что хотите тренировать? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Z-86-rg6">
-                                <rect key="frame" x="94" y="311" width="205" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to train?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Z-86-rg6">
+                                <rect key="frame" x="81.000000000000014" y="309" width="231.33333333333337" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -150,7 +150,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math Trainer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t78-bu-cl3">
-                                <rect key="frame" x="69.666666666666686" y="223" width="254" height="48"/>
+                                <rect key="frame" x="69.666666666666686" y="221" width="254" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -217,6 +217,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="fUV-N2-Nnm"/>
                     <connections>
+                        <outlet property="countAdd" destination="6GK-iN-Nxa" id="nid-Zr-bX2"/>
+                        <outlet property="countDivide" destination="UtY-3C-0Ak" id="qvV-NL-8lY"/>
+                        <outlet property="countMultiply" destination="DTA-oQ-0i1" id="CCQ-1S-P4I"/>
+                        <outlet property="countSubtract" destination="FND-XO-lDY" id="Udf-KE-M7s"/>
                         <outletCollection property="buttonsCollection" destination="xZY-OS-UeQ" collectionClass="NSMutableArray" id="oIF-qv-jqo"/>
                         <outletCollection property="buttonsCollection" destination="lDs-2X-CHE" collectionClass="NSMutableArray" id="hxm-gq-Tl2"/>
                         <outletCollection property="buttonsCollection" destination="MsS-n9-iCV" collectionClass="NSMutableArray" id="FbL-38-A2V"/>
@@ -250,6 +254,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="sendData:" destination="alO-DL-jei" eventType="touchUpInside" id="fOv-Hz-HSL"/>
                                     <segue destination="Z5n-Dm-Dcf" kind="unwind" unwindAction="unwindActionWithUnwindSegue:" id="r68-Le-401"/>
                                 </connections>
                             </button>
@@ -303,6 +308,12 @@
                                     <action selector="rightAction:" destination="alO-DL-jei" eventType="touchUpInside" id="kBf-8V-aUx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Count: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D69-5A-LEP">
+                                <rect key="frame" x="30" y="85" width="116" height="26"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WfE-H7-Htb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -310,7 +321,9 @@
                             <constraint firstItem="mIS-dk-y5l" firstAttribute="centerX" secondItem="lCN-mT-gWD" secondAttribute="centerX" constant="60" id="3f9-5O-phV"/>
                             <constraint firstItem="aHE-8s-VVa" firstAttribute="top" secondItem="7LH-qD-UnF" secondAttribute="bottom" constant="120" id="5R8-Il-UHw"/>
                             <constraint firstItem="aHE-8s-VVa" firstAttribute="centerX" secondItem="lCN-mT-gWD" secondAttribute="centerX" constant="-60" id="AhQ-SU-fmr"/>
+                            <constraint firstItem="D69-5A-LEP" firstAttribute="top" secondItem="WfE-H7-Htb" secondAttribute="top" constant="26" id="FLD-UM-be3"/>
                             <constraint firstItem="7LH-qD-UnF" firstAttribute="centerX" secondItem="lCN-mT-gWD" secondAttribute="centerX" id="LRZ-Mn-4a7"/>
+                            <constraint firstItem="D69-5A-LEP" firstAttribute="leading" secondItem="WfE-H7-Htb" secondAttribute="leading" constant="30" id="Z8o-qm-Wql"/>
                             <constraint firstItem="mIS-dk-y5l" firstAttribute="centerY" secondItem="aHE-8s-VVa" secondAttribute="centerY" id="ets-Ho-fLj"/>
                             <constraint firstItem="6LX-Vb-mkY" firstAttribute="top" secondItem="WfE-H7-Htb" secondAttribute="top" constant="20" id="jAf-tJ-vMV"/>
                             <constraint firstItem="WfE-H7-Htb" firstAttribute="trailing" secondItem="6LX-Vb-mkY" secondAttribute="trailing" constant="30" id="sfK-uW-ks9"/>
@@ -319,6 +332,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Vq-P4-FJf"/>
                     <connections>
+                        <outlet property="countLabel" destination="D69-5A-LEP" id="PHA-aF-MgO"/>
                         <outlet property="leftButton" destination="aHE-8s-VVa" id="jgR-zB-Nak"/>
                         <outlet property="questionLabel" destination="7LH-qD-UnF" id="CUZ-r0-Vvx"/>
                         <outlet property="rightButton" destination="mIS-dk-y5l" id="MTa-BE-AS3"/>
